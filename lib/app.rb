@@ -12,7 +12,14 @@ get '/robin' do
   "Batman's partner"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Batman", "Robin", "Alfred"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params.values
+  @name = params[:name]
+  @repeat = params[:repeat]
   erb(:index)
 end
