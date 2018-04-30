@@ -13,5 +13,6 @@ get '/robin' do
 end
 
 get '/cat' do
+  @name = ["Batman", "Robin", "Alfred"].sample
   erb(:index)
 end
