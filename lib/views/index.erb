@@ -1,6 +1,10 @@
-<% @repeat.to_i.times do %>
+<form action="/named-cat">
 <h1>My name is <%= @name %></h1>
-<% end %>
 <div style='border: dashed red'>
   <img src='http://bit.ly/1eze8aE'>
 </div>
+<% if @name.nil? %>
+<input type="text" name="name" style='border: dashed blue'>
+<input type="submit" value="Submit">
+<% end %>
+</form>
